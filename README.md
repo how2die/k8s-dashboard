@@ -15,14 +15,6 @@ To deploy Dashboard, execute the following command:
 $ kubectl apply -f kubernetes-dashboard-arm.yaml
 ```
 
-Configure the ingress to expose the dashboard:
-
-```sh
-$ kubectl apply -f ingress.yaml
-```
-
-(Note: ingress controller had to accept invalid SSL certificates for this to work. This is probably not ideal!)
-
 ### Managing permissions
 
 Create an [admin service account](https://github.com/kubernetes/dashboard/wiki/Creating-sample-user) to manage the cluster:
