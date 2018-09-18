@@ -34,7 +34,7 @@ $ kubectl apply -f admin-user.yaml
 We will use the `admin-user` token as a Bearer token to log in to the Dashboard. Get the token by typing:
 
 ```sh
-kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
+$ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ```
 
 Copy the token and paste it into the `Enter token` field on log in screen. Click the `Sign in` button, and that's it. You are now logged in as an admin!
