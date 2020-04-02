@@ -12,12 +12,12 @@ Kubernetes Dashboard, based on the [official guide](https://github.com/kubernete
 To deploy Dashboard, execute the following command:
 
 ```sh
-$ kubectl apply -f kubernetes-dashboard-arm.yaml
+$ kubectl apply -f deployment.yaml
 ```
 
 ### Managing permissions
 
-Create an [admin service account](https://github.com/kubernetes/dashboard/wiki/Creating-sample-user) to manage the cluster:
+Create an admin service account to manage the cluster:
 
 ```sh
 $ kubectl apply -f admin-user.yaml
