@@ -12,7 +12,7 @@ Kubernetes Dashboard, based on the [official guide](https://github.com/kubernete
 To deploy Dashboard, execute the following command:
 
 ```sh
-$ kubectl apply -f deployment.yaml
+kubectl apply -f deployment.yaml
 ```
 
 ### Managing permissions
@@ -20,13 +20,13 @@ $ kubectl apply -f deployment.yaml
 Create an admin service account to manage the cluster:
 
 ```sh
-$ kubectl apply -f admin-user.yaml
+kubectl apply -f admin-user.yaml
 ```
 
 We will use the `admin-user` token as a Bearer token to log in to the Dashboard. Get the token by typing:
 
 ```sh
-$ kubectl -n kube-system describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+kubectl -n kube-system describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
 ```
 
 Copy the token and paste it into the `Enter token` field on log in screen. Click the `Sign in` button, and that's it. You are now logged in as an admin!
